@@ -17,3 +17,8 @@ main {
   min-height: 90vh;
   margin: auto;
 }
+
+.Remove {
+  background: red;
+  color: white;
+}
