@@ -1,10 +1,9 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
+import { useCart } from "../context/CartContext";
 
 export const Header = () => {
   const nav = useNavigate();
-  const { cartList } = useContext(CartContext);
+  const { cartList } = useCart();
   const active =
     "block py-2 px-3  text-2xl  text-white  bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500";
 

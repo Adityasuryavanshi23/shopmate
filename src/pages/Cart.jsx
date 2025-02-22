@@ -9,16 +9,26 @@ export const Cart = ({ title }) => {
 
   return (
     <main>
-      <section className="max-w-screen-xl m-auto">
-        <p className="capitalize text-2xl my-24 text-center">
-          cart items : {cartList.length} / ${total}
-        </p>
+      <section className="max-w-screen-xl min-h-[400px]  my-28 m-auto">
+        {cartList.length == 0 && (
+          <h1 className="text-center capitalize text-3xl mt-4">
+            Cart is Empty
+          </h1>
+        )}
+
         <div>
           {cartList.map((products) => (
             <CartCard key={products.id} products={products} />
           ))}
         </div>
       </section>
+      <p className="capitalize text-2xl text-right mr-12">
+        cart items : {cartList.length}
+      </p>
+
+      <div className="text-right mr-12 capitalize text-3xl mt-4">
+        total: ${total}
+      </div>
     </main>
   );
 };

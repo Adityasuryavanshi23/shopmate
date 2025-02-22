@@ -18,7 +18,25 @@ main {
   margin: auto;
 }
 
-.Remove {
-  background: red;
-  color: white;
+.item-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+
+}
+
+.item-title {
+  flex: 2;
+  text-align: left;
+  margin-left: 200px;
+  
+}
+
+.item-price,
+.item-remove {
+  flex: 1;
+  text-align: center;
+
 }
